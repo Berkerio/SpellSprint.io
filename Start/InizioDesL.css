@@ -1,0 +1,112 @@
+body {
+  position: relative;
+	margin: 0;
+	overflow: hidden;
+	background-color: #1F0052;
+	align-items: center;
+	justify-content: center;
+  }
+  #main-background {
+    overflow: hidden;
+    background-color: #1F0052;
+    z-index: -2;
+  }
+  .background-video {
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  #video-background {
+    z-index: 1;
+  }
+  
+  #video-loop {
+    z-index: 0;
+    display: none;
+  }
+
+
+
+.button-container {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; /* Aggiungiamo margine superiore per separare i bottoni dal contenuto */
+  top: 400px;
+}
+	
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  margin: 50px;
+  animation-delay: appear 2s;
+  animation: appear 1s;
+ }
+
+
+
+ @keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+  .button-container button {
+    background: none;
+    border: none;
+    cursor: pointer;  
+    z-index: 1;
+  }
+  
+button:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease; /* Combine hover effects */
+    opacity: 1; 
+}
+  
+  .button-container img {
+    width: 120px; /* Adjust width as needed */
+    height: auto;
+  }
+  
+i {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background:#AF37FF;
+  pointer-events: none;
+  animation: animate 2s linear forwards;
+  z-index: 1;
+  /* Aggiungi effetto di glow */
+  box-shadow: 
+	  0 
+	  0 
+	  50px 
+	  5px #AF37FF; /* Cambia i valori di dimensione e colore del bagliore se necessario */
+}
+
+@keyframes animate{
+	0%{
+		opacity:1;
+		transform: translate(0,0);
+	}
+	100%{
+		opacity:0;
+		transform: translate(var(--x),var(--y));
+	}
+}
