@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select Your Mode</title>
+	<link rel="stylesheet" type="text/css" href="ModDesign.css">
+</head>
+<body>
+	 <h1>SELECT MODE</h1>
+	<p>HOVER OVER THE BUTTONS TO VIEW THE RULES FOR EACH MODE.</p>
+    <div id="video-container">
+        <video id="video-background" autoplay muted class="background-video fade-in">
+        <source src="../../AsAs/Modalities Schermata.mp4" type="video/mp4"> 
+    </video>
+        <video id="video-loop" muted loop class="background-video">
+        <source src="" type="video/mp4">
+    </video>
+  </div>
+	<div class="container">
+		<div class="buttons">
+			<button id="easy" class="button" onclick="window.location.href = 'Easy/EasyModeEn.html'">EASY
+				<span id="easytx" class="tooltip">YOU WILL HAVE A 5-LETTER WORD AND A MAXIMUM OF THREE AVAILABLE ATTEMPTS TO WIN!</span>
+			</button>
+
+			<button id="medium" class="button" onclick="window.location.href = 'Medium/MediumModeEn.html'">MEDIUM
+				<span id="mediumtx" class="tooltip">YOU WILL HAVE A 7-LETTER WORD AND A MAXIMUM OF 2 AVAILABLE ATTEMPTS TO WIN!</span>
+			</button>
+			<button id="extreme" class="button" onclick="window.location.href = 'Extreme/ExtremeModeEn.html'" >EXTREME
+				<span id="extremetx" class="tooltip">YOU WILL HAVE A 11-LETTER WORD AND A MAXIMUM OF 1 AVAILABLE ATTEMPTS TO WIN!</span>
+			</button>
+		</div>
+		<a href="../MainPageEn.html" class="back-button">Back</a>
+		<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-01d362e0-0ee1-4002-9072-0a8bf5223cab" data-elfsight-app-lazy></div>
+	
+	<script src="Modal.js"></script>
+</body>
+</html>

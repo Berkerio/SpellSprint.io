@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modalità Facile</title>
+	<link rel="stylesheet" type="text/css" href="FacileDesign.css">
+    <script src="https://www.defio.info/REST/Estrazione.js" ></script>
+</head>
+<body>
+	<h1>BENVENUTI ALLA MODALITA' FACILE</h1>
+    <div id="video-container">
+        <video id="video-background" autoplay muted class="background-video fade-in">
+        <source src="../../../AsAs/GamePageAnimEasy.mp4" type="video/mp4"> 
+    </video>
+        <video id="video-loop" muted loop class="background-video">
+        <source src="" type="video/mp4">
+    </video>
+	</div>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup-container" id="popup-container">
+        <video id="victory-video" autoplay muted>
+            <source src="../../../AsAs/Hai Vinto!.mp4" type="video/mp4">
+        </video>
+    </div>
+    </div>
+    <div class="overlay1" id="overlay1"></div>
+    <div class="popup2-container" id="popup2-container">
+        <video id="gameover-video" autoplay muted>
+            <source src="../../../AsAs/Game Over.mp4" type="video/mp4">
+        </video>
+    </div>
+    </div>
+    <button onclick="window.location.href='../ModRegole.html'" class="ChgMode">Cambia<br>Modalità</button>
+    <button id="RULES" class="Rls">REGOLE
+        <span id="RULESFX" class="tooltip">AVRAI UNA PAROLA DI 5 LETTERE E UN MASSIMO DI TRE TENTATIVI DISPONIBILI PER VINCERE! PASSA IL MOUSE SUI PULSANTI PER VEDERE I DETTAGLI!!</span>
+    </button>
+    <p id="error" class="error">La parola inserita non e corretta! riprova.</span></p>
+    <p id="wordWas" class="wordWas">LA PAROLA CORRETTA E <span id="correctWord"></span></p>
+    <section> 
+        <p id="attempts" class="attempts">
+        </p>
+        <div class="Guess">
+            <input type="text" id="UrGuess" class="GuessI" autocomplete="off" placeholder=" ">
+            <label for="UrGuess" class="GuessL">LA TUA SOLUZIONE</label>
+        </div>
+        <div id="gameSpace">
+            <canvas id="canvas" width="600" height="190"></canvas>
+          <p id="scrambleP" class="scrambleP"></p>
+        </div>
+
+        <div class="container">
+            <div class="butts">
+                <button id="Reset" class="Reset" >RESET
+                    <span id="ResetFX" class="tooltip">RESETTA IL GIOCO RICARICANDO LA PAGINA. UNA VOLTA CHE CLICCHI SU 'MOSTRA SOLUZIONE', SEI TENUTO A CLICCARE 'RESET'</span>
+                </button>
+                <button id="Sumbit" class="Sumbit" >INVIA!
+                    <span id="Sumbit" class="tooltip">RIVELA LA SOLUZIONE AL POSTO DELLA PAROLA MESCOLATA UNA VOLTA CLICCATA. DOPO CHE LA SOLUZIONE È VISUALIZZATA, NON PUOI PIÙ INSERIRE O INVIARE SOLUZIONI.</span>
+                </button>
+                <button id="Shuffle" class="Shuffle" >MISCHIA
+                    <span id="Shuffle" class="tooltip">MESCOLA LE LETTERE DELLA PAROLA, CAMBIANDO IL LORO ORDINE CON UN RITARDO DI 1 SECONDO</span>
+                </button>
+                <button id="ShwGuess" class="ShwGuess" >MOSTRA SOLUZIONE!
+                    <span id="ShwGuess" class="tooltip">RIVELA LA SOLUZIONE AL POSTO DELLA PAROLA MESCOLATA UNA VOLTA CLICCATA. DOPO CHE LA SOLUZIONE È VISUALIZZATA, NON PUOI PIÙ INSERIRE O INVIARE SOLUZIONI.</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="keyboard">
+            <div class="row">
+                <button class="btn">Q</button>
+                <button class="btn">W</button>
+                <button class="btn">E</button>
+                <button class="btn">R</button>
+                <button class="btn">T</button>
+                <button class="btn">Y</button>
+                <button class="btn">U</button>
+                <button class="btn">I</button>
+                <button class="btn">O</button>
+                <button class="btn">P</button>
+            </div>
+            <div class="row">
+                <button class="btn">A</button>
+                <button class="btn">S</button>
+                <button class="btn">D</button>
+                <button class="btn">F</button>
+                <button class="btn">G</button>
+                <button class="btn">H</button>
+                <button class="btn">J</button>
+                <button class="btn">K</button>
+                <button class="btn">L</button>
+            </div>
+            <div class="row">
+                <button class="btn">Z</button>
+                <button class="btn">X</button>
+                <button class="btn">C</button>
+                <button class="btn">V</button>
+                <button class="btn">B</button>
+                <button class="btn">N</button>
+                <button class="btn">M</button>
+                <button id="btnDel" class="delete">DEL</button>
+            </div>
+        </div>
+    </section>
+	<script src="Sparkle.js"></script>
+    <script src="Facile.js"></script>
+    <script src="Keyboard.js"></script>
+    <script src="ExtractionFac.js"></script>   
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-01d362e0-0ee1-4002-9072-0a8bf5223cab" data-elfsight-app-lazy></div>
+</body>
+</html>

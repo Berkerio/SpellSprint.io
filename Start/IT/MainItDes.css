@@ -1,0 +1,180 @@
+@font-face{
+	font-family: Myfont;
+	src: url("../Fonts/i_pixel_u/I-pixel-u.ttf");
+}
+*{
+	font-family: MyFont;
+}
+body {
+	margin: 0;
+	overflow: hidden;
+	background-color: #1F0052;
+	align-items: center;
+	justify-content: center;
+	
+  }
+  
+  button {
+	font-family: Myfont;
+	display: block;
+	margin: 0 auto;
+	background-size: 180px;
+	position: relative;
+	height: 40px;
+	width: 200px;
+	border: none;
+	outline: none;
+	background: #00000000;
+	color: rgb(0, 195, 254);
+	cursor: pointer;
+	font-size: 18px;
+	border-radius: 0px;
+	opacity: 0; /* Initially hide the buttons */
+	transition: opacity 0.5s ease-in-out; /* Add transition for smooth appearance */
+    justify-content: space-between;
+	top: 25cap;
+	bottom: 8cap;
+	letter-spacing: 2px;
+	transition: 0.5s;
+	
+}
+button {
+	animation: buttonAppear 3s ease-in-out forwards;
+	animation-delay: 6s; 
+  }
+  
+  @keyframes buttonAppear {
+	from { opacity: 0; }
+	to { opacity: 1; }
+  }
+  button::after 
+  {
+	content: "";
+	top: -2px;
+	left: -2px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+  }
+  button::before{
+	content: "";
+	background: linear-gradient(
+	  90deg,
+	  #0015ff, #76a6ba, #06649e91, #00d9ff7d,
+	  #3300ff, #aa00ff, #FF00C8,  #0015ff
+	);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	z-index: -1;
+	background-size: 600%;
+	width: calc(100% + 4px);
+	height:  calc(100% + 4px);
+	filter: brightness(-400);
+	animation: glowing 20s linear infinite;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+  }
+  @keyframes glowing {
+	0% {background-position: 0 0;}
+	50% {background-position: 400% 0;}
+	100% {background-position: 0 0;}
+  }
+ button:hover::before {
+	opacity: 1;
+  }
+  button:hover{
+	color:#9dffe3;
+	font-weight: bold;
+	transform: scale(1.1);
+	transition: font weight 0.3s,transform 0.4s ease;
+	 filter: drop-shadow(60px);
+
+  }
+  
+ button:active:after {
+	background: transparent;
+  }
+  
+ button:active {
+	color: #000;
+	font-weight: bold;
+  }
+#play {
+	filter: hue-rotate(293deg);
+	
+}  
+
+.language-button-container {
+	position: absolute;
+	bottom: 55em;
+  }
+#language-button{
+	filter: hue-rotate(84deg);
+	
+}
+  
+   
+i {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background:#AF37FF;
+  pointer-events: none;
+  animation: animate 2s linear forwards;
+  z-index: 1;
+  /* Aggiungi effetto di glow */
+  box-shadow: 
+	  0 
+	  0 
+	  50px 
+	  5px #AF37FF; /* Cambia i valori di dimensione e colore del bagliore se necessario */
+}
+@keyframes animate{
+	0%{
+		opacity:1;
+		transform: translate(0,0);
+	}
+	100%{
+		opacity:0;
+		transform: translate(var(--x),var(--y));
+	}
+}
+
+
+.background-video {
+    object-fit: cover; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0; /* Aggiungi questa riga per impostare l'opacità iniziale a 0 */
+}
+
+
+.fade-in {
+  animation: fadeInAnimation 2s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#video-background {
+    z-index: 0;
+}
+
+#video-loop {
+    z-index: 0;
+}
+
+
+
