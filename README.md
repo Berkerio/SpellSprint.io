@@ -1,7 +1,7 @@
 
 
 ![Animazione principale](https://github.com/Berkerio/SpellSprint.io/assets/161024367/f29eefb1-e0a7-4617-a72c-4e2d8899984c)
-
+Here is the link for the game! [SpellSprint: Word Scramble](https://berkerio.github.io/SpellSprint.io/Start/InizioLingua.html)
 
 
 # SpellSprint
@@ -63,4 +63,4 @@ In addition to the game itself, SpellSprint offers us several screens:
 
 ## Conclusion
 We have seen the internal structure, the graphics, and the description of the game. Thank you all for your attention.
-Here is the link for the game! [SpellSprint: Word Scramble](https://berkerio.github.io/SpellSprint.io/Start/InizioLingua.html)
+
