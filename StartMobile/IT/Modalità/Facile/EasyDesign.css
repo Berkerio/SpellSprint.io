@@ -1,0 +1,205 @@
+@font-face {
+    font-family: MyFont1;
+    src: url("../../../Fonts/Minecraft Ten/MinecraftTen-VGORe.ttf");
+}
+@font-face {
+    font-family: MyFont;
+    src: url("../../../Fonts/i_pixel_u/I-pixel-u.ttf");
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: MyFont, sans-serif;
+    background-image: url('/StartMobile/AsAs/Schermata3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: hue-rotate(100%);
+}
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+.result-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    text-align: center;
+}
+
+.win-screen {
+    background-color: rgba(0, 255, 0, 0.6); /* Verde con opacità 0.6 */
+}
+
+.lose-screen {
+    background-color: rgba(255, 0, 0, 0.6); /* Rosso con opacità 0.6 */
+}
+
+.result-screen.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.result-screen img {
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.result-screen p {
+    font-family: MyFont1, sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.result-message {
+    font-family: MyFont2, sans-serif; /* Usa MyFont2 come richiesto */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+#attempts {
+    font-family: MyFont1;
+    color: #00ff84;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    filter: hue-rotate(220deg);
+    text-align: center;
+}
+#mostra-soluzione {
+    font-family: MyFont1;
+    color: #ff00ff;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#mostra-soluzione:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+#gameSpace {
+    font-family: MyFont1;
+    background: rgba(0, 132, 18, 0.489);
+    border: 3px solid rgb(0, 255, 55);
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-size: 40px;
+    color: #000d04;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: hue-rotate(220deg);
+}
+.Guess {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.GuessI {
+    width: 100%;
+    height: 40px;
+    border: 3px solid #095c00fd;
+    font-size: 18px;
+    color: rgb(32, 97, 0);
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s;
+    font-family: MyFont1;
+}
+.GuessI:hover, .GuessI:focus {
+    border-color: #44ff00a9;
+}
+button {
+    font-family: MyFont;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 8px 0;
+    transition: all 0.3s;
+    text-align: center;
+}
+#mischia-btn { color: #ff0000; }
+#submit-btn { color: #00ff00; }
+#reset-btn { color: #ffff00; }
+#change-mode-btn { color: #ff00ff; }
+button:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+.result-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 146, 124, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.result-screen.show {
+    opacity: 1;
+    visibility: visible;
+}
+.result-screen img {
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+.result-screen p {
+    font-size: 28px;
+    margin-bottom: 20px;
+
+}
+@keyframes allAppear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate-in {
+    animation: allAppear 3s ease-in-out forwards;
+}
+#error-message {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
