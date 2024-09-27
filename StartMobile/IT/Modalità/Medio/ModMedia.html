@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="MidDesign.css">
+    <title>MODALITA' MEDIA</title>
+</head>
+<body>
+    <div id="game-container" class="animate-in">
+        <p id="attempts">TENTATIVI: <span id="attempts-count">2</span></p>
+        <p id="mostra-soluzione" role="button" tabindex="0">MOSTRA SOLUZIONE</p>
+        <div id="gameSpace"></div>
+        <div class="Guess">
+            <input type="text" id="solution-input" class="GuessI" placeholder="LA TUA SOLUZIONE">
+        </div>
+        <p id="error-message" class="error"></p>
+        <button id="mischia-btn">MISCHIA</button>
+        <button id="submit-btn">INVIA</button>
+        <button id="reset-btn">RESET</button>
+        <button onclick="window.location.href='../ModRegole.html'" id="change-mode-btn" class="ChgMode">CAMBIA MODALITA'</button>
+    </div>
+
+    <div id="game-over-screen" class="result-screen lose-screen">
+        
+        <p>Game Over</p>
+        <p id="lose-message" class="result-message"></p>
+        <button id="game-over-reset">RESET</button>
+    </div>
+
+    <div id="you-won-screen" class="result-screen win-screen">
+        
+        <p>Hai Vinto!</p>
+        <p id="win-message" class="result-message"></p>
+        <button id="you-won-reset">RESET</button>
+    </div>
+
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-01d362e0-0ee1-4002-9072-0a8bf5223cab" data-elfsight-app-lazy></div>
+    <script src="Medio.js"></script>
+</body>
+</html>
