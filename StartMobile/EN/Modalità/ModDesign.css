@@ -1,0 +1,128 @@
+@font-face {
+    font-family: MyFont;
+    src: url("../../Fonts/i_pixel_u/I-pixel-u.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: MyFont, sans-serif;
+    background-color: #1F0052;
+    background-image: url('/StartMobile/AsAs/Schermata3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #004f4f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+h1, p {
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: buttonAppear 3s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+h1 {
+    font-size: 7vw;
+    filter: hue-rotate(34deg) brightness(1.5);
+}
+
+p {
+    font-size: 4vw;
+    filter: brightness(23);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.button {
+    font-family: MyFont, sans-serif;
+    background: transparent;
+    color: #6178FE;
+    cursor: pointer;
+    font-size: 6vw;
+    border: none;
+    outline: none;
+    opacity: 0;
+    animation: buttonAppear 3s ease-in-out forwards;
+    animation-delay: 1s;
+    transition: 0.3s;
+    position: relative;
+    padding: 10px;
+}
+
+.button:hover, .button:focus {
+    color: #93ABFF;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    width: 200%;
+    background-color: #000354;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 3vw;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.button:hover .tooltip, .button:focus .tooltip {
+    display: block;
+}
+
+.back-button {
+    color: #95fe61;
+    text-decoration: none;
+    font-size: 5vw;
+    opacity: 0;
+    animation: buttonAppear 3s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.back-button:hover, .back-button:focus {
+    color: #ff0303;
+    font-weight: bold;
+}
+
+#easy { filter: hue-rotate(250deg); }
+#extreme { filter: hue-rotate(120deg); }
+
+@keyframes buttonAppear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (min-width: 768px) {
+    h1 { font-size: 36px; }
+    p { font-size: 18px; }
+    .button { font-size: 28px; }
+    .tooltip { font-size: 14px; }
+    .back-button { font-size: 25px; }
+}
