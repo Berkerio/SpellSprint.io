@@ -1,0 +1,152 @@
+@font-face {
+	font-family: Myfont;
+	src: url("../Fonts/i_pixel_u/I-pixel-u.ttf");
+  }
+  
+  * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: Myfont;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	height: 100vh;
+	width: 100vw;
+  }
+  
+  .background-image {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('/StartMobile/AsAs/SplsMb.png');
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+  }
+  
+  #main-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20vh 0; /* Aggiunto padding verticale */
+  }
+  
+  .button-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+  }
+  
+  button {
+	font-family: Myfont;
+	display: block;
+	margin: 15px auto;
+	background-size: contain;
+	position: relative;
+	height: 50px;
+	width: 90%;
+	max-width: 350px;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: rgb(0, 195, 254);
+	cursor: pointer;
+	font-size: 18px;
+	border-radius: 0px;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out, transform 0.3s ease;
+	animation: buttonAppear 1s ease-in-out forwards;
+	animation-delay: 0.3s;
+	top: 10vh;
+  }
+  
+  @keyframes buttonAppear {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+  }
+  
+  button::before {
+	content: "";
+	background: linear-gradient(
+	  90deg,
+	  #0015ff, #76a6ba, #06649e91, #00d9ff7d,
+	  #3300ff, #aa00ff, #FF00C8, #0015ff
+	);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	z-index: -1;
+	background-size: 600%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	filter: brightness(0.75);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+  }
+  
+  @keyframes glowing {
+	0% { background-position: 0 0; }
+	50% { background-position: 400% 0; }
+	100% { background-position: 0 0; }
+  }
+  
+  button:hover::before {
+	opacity: 1;
+  }
+  
+  button:hover {
+	color: #9dffe3;
+	font-weight: bold;
+	transform: scale(1.05);
+  }
+  
+  button:active {
+	color: #000;
+	font-weight: bold;
+  }
+  
+  .language-button-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: auto; /* Sposta il contenitore in fondo */
+	padding-bottom: 60vh; /* Aggiunge spazio sotto il bottone */
+  }
+  
+  #play {
+	filter: hue-rotate(293deg);
+  }
+  
+  #language-button {
+	filter: hue-rotate(84deg);
+  }
+  
+  @media only screen and (max-width: 600px) {
+	button {
+	  font-size: 16px;
+	  height: 45px;
+	}
+  
+	#main-container {
+	  padding: 15vh 0; /* Riduce il padding verticale su schermi più piccoli */
+	}
+  
+	.language-button-container {
+	  padding-bottom: 3vh; /* Riduce lo spazio sotto il bottone su schermi più piccoli */
+	}
+  }
