@@ -1,0 +1,113 @@
+/* Impostazioni generali per la pagina */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenitore di sfondo colorato */
+.background-color {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1F0052;
+  z-index: -2;
+}
+/* Contenitore principale */
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.main-container.fade-in {
+  opacity: 1;
+}
+
+/* Immagine di sfondo */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('AsAs/Selectyourlanguagescreen.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* Container dei pulsanti */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/* Stile per i pulsanti */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query per dispositivi mobili */
+@media only screen and (max-width: 600px) {
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button img {
+    width: 80px;
+  }
+}
+i {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background:#AF37FF;
+  pointer-events: none;
+  animation: animate 2s linear forwards;
+  z-index: 9999;
+  /* Aggiungi effetto di glow */
+  box-shadow: 
+	  0 
+	  0 
+	  50px 
+	  5px #AF37FF; /* Cambia i valori di dimensione e colore del bagliore se necessario */
+}
+@keyframes animate{
+	0%{
+		opacity:1;
+		transform: translate(0,0);
+	}
+	100%{
+		opacity:0;
+		transform: translate(var(--x),var(--y));
+	}
+}

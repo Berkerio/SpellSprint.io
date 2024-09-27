@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpellSprint</title>
+  <link rel="stylesheet" type="text/css" href="InizioDesL.css">
+</head>
+<body>
+  <div class="background-color"></div>
+  <div class="main-container">
+    <div class="background-image"></div>
+    <div class="button-container">
+      <button id="itflag" onclick="changeBackground('italian', 'path/to/new-bg-italian.jpg')">
+        <img src="../../Starter animation/Italian button.png" alt="Italian Flag">
+      </button>
+
+      <button id="enflag" onclick="changeBackground('english', 'path/to/new-bg-english.jpg')">
+        <img src="../../Starter animation/english button.png" alt="English Flag">
+      </button>
+    </div>
+  </div>
+  <script src="AudioLing.js"></script>
+  <script>
+    function changeBackground(language, newBg) {
+      document.querySelector('.main-container').style.opacity = '0';
+
+      setTimeout(function() {
+        document.querySelector('.background-image').style.backgroundImage = `url(${newBg})`;
+        
+        setTimeout(function() {
+          if (language === 'italian') {
+            window.location.href = 'IT/MainPageIT.html';
+          } else if (language === 'english') {
+            window.location.href = 'EN/MainPageEn.html';
+          }
+        }, 500);
+      }, 500);
+    }
+
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.querySelector('.main-container').classList.add('fade-in');
+      }, 100);
+    });
+  </script>
+          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+          <div class="elfsight-app-01d362e0-0ee1-4002-9072-0a8bf5223cab" data-elfsight-app-lazy></div>
+</body>
+</html>
