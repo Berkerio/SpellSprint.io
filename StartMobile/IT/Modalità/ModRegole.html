@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleziona La tua Modalità</title>
+    <link rel="stylesheet" type="text/css" href="ModDesign.css">
+</head>
+<body>
+    <main class="container">
+        <h1>SELEZIONA MODALITÁ</h1>
+        <p>PASSA SOPRA AI BOTTONI PER VISUALIZZARE LE REGOLE DI OGNI MODALITÁ</p>
+        <div class="buttons">
+            <button id="easy" class="button" onclick="window.location.href = 'Facile/ModEasy.html'">
+                FACILE
+                <span id="easytx" class="tooltip">AVRAI UNA PAROLA DI 5 LETTERE E UN MASSIMO DI 3 TENTATIVI PER VINCERE IL GIOCO!</span>
+            </button>
+            <button id="medium" class="button" onclick="window.location.href = 'Medio/ModMedia.html'">
+                MEDIO
+                <span id="mediumtx" class="tooltip">AVRAI UNA PAROLA DI 7 LETTERE E UN MASSIMO DI 2 TENTATIVI PER VINCERE IL GIOCO!</span>
+            </button>
+            <button id="extreme" class="button" onclick="window.location.href = 'Estremo/ModExtreme.html'">
+                ESTREMO
+                <span id="extremetx" class="tooltip">AVRAI UNA PAROLA DI 11 LETTERE E UN MASSIMO DI 1 TENTATIVO PER VINCERE IL GIOCO!</span>
+            </button>
+        </div>
+        <a href="../MainPageIt.html" class="back-button">Torna Indietro!</a>
+    </main>
+    
+    <script src="Modal.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-01d362e0-0ee1-4002-9072-0a8bf5223cab" data-elfsight-app-lazy></div>
+</body>
+</html>
