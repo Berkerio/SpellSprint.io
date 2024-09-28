@@ -1,7 +1,7 @@
 
 
 ![Animazione principale](https://github.com/Berkerio/SpellSprint.io/assets/161024367/f29eefb1-e0a7-4617-a72c-4e2d8899984c)
-Here is the link for the game! [SpellSprint: Word Scramble](https://berkerio.github.io/SpellSprint.io/Start/InizioLingua.html)
+Here is the link for the game! [SpellSprint: Word Scramble](https://berkerio.github.io/SpellSprint.io/Start/InizioLingua.html) [SpellSprint: Mobile Version](https://berkerio.github.io/SpellSprint.io/StartMobile/InizioLingua.html)
 
 
 # SpellSprint
