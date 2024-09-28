@@ -1,10 +1,10 @@
 @font-face {
     font-family: MyFont1;
-    src: url("../../../Fonts/Minecraft Ten/MinecraftTen-VGORe.ttf");
+    src: url("../../../Fonts/MinecraftTen-VGORe.ttf");
 }
 @font-face {
     font-family: MyFont;
-    src: url("../../../Fonts/i_pixel_u/I-pixel-u.ttf");
+    src: url("../../../Fonts/I-pixel-u.ttf");
 }
 body {
     display: flex;
@@ -18,7 +18,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: hue-rotate(100deg);
+    filter: hue-rotate(100%);
 }
 #game-container {
     display: flex;
@@ -199,7 +199,6 @@ button:hover {
     animation: allAppear 3s ease-in-out forwards;
 }
 #error-message {
-    color: #ff00ff;
     font-size: 18px;
     margin-top: 10px;
     text-align: center;
