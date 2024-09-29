@@ -13,7 +13,7 @@ body {
 	background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-	margin-top: 52cap;
+	margin-top: 55cap;
   }
   
   button {
@@ -34,9 +34,10 @@ body {
 	opacity: 0; /* Initially hide the buttons */
 	transition: opacity 0.5s ease-in-out; /* Add transition for smooth appearance */
     justify-content: space-between;
-	top: 3cap;
+	bottom: 3cap;
 	letter-spacing: 2px;
 	transition: 0.5s;
+	
 }
 button {
 	animation: buttonAppear 0.3s ease-in-out forwards;
